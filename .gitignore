@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Temp / local dev
+.tmp/
+*.log
+
+# Netlify build artifacts (not needed for static site)
+.netlify/

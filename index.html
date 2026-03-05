@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Autentisk thailändsk mat, kall öl och sport på storbildsskärm. Besök Royal Thai SportsBar i Bromölla. Hemkörning från 39 kr via Foodora." />
+    <title>Royal Thai SportsBar — Thailändsk Mat &amp; Sport i Bromölla</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* ── Meny CTA section ───────────────────────── */
+        .meny-cta-section {
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+        }
+
+        .meny-cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .meny-cta-btn {
+            flex-shrink: 0;
+            font-size: 0.95rem;
+            padding: 14px 36px;
+        }
+
+        @media (max-width: 600px) {
+            .meny-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .meny-cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════ NAV ═════════════════════════════════ -->
+    <header class="site-header" id="top">
+        <nav class="nav-container">
+            <a href="#hem" class="nav-logo">
+                Royal Thai <span>SportsBar</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hem" class="nav-link">Hem</a></li>
+                <li><a href="meny.html" class="nav-link">Meny</a></li>
+                <li><a href="#om-oss" class="nav-link">Om oss</a></li>
+                <li><a href="#evenemang" class="nav-link">Evenemang</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile drawer overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- ═══════════════════════════════════ HEM ══════════════════════════════════ -->
+    <section id="hem" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Välkommen till</p>
+            <h1 class="hero-title">Royal Thai<br /><span>SportsBar</span></h1>
+            <p class="hero-tagline">
+                Autentisk thailändsk mat, kall öl &amp; sport på storbildsskärm —
+                allt under ett tak i Bromölla.
+            </p>
+            <div class="hero-ctas">
+                <a href="meny.html" class="btn btn-primary">Se menyn</a>
+                <a href="#kontakt" class="btn btn-outline">Hitta hit</a>
+            </div>
+            <a href="https://www.foodora.se/restaurant/p8kt/royal-thai-sportsbar" target="_blank" rel="noopener"
+                class="foodora-badge" id="foodora-hero">
+                🛵 <span>Mat hemkörning från <strong>39 kr</strong> via Foodora</span>
+            </a>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scrolla ner</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════ MENY CTA ═══════════════════════════════ -->
+    <section id="meny" class="section meny-cta-section">
+        <div class="container meny-cta-inner">
+            <div class="meny-cta-text">
+                <p class="section-eyebrow">Avhämtningsmeny</p>
+                <h2 class="section-title">Vår <span>meny</span></h2>
+                <p class="section-sub">Autentisk thailändsk mat &amp; svenska klassiker. Hemkörning från 39 kr via
+                    Foodora.</p>
+            </div>
+            <a href="meny.html" class="btn btn-primary meny-cta-btn" id="se-meny-btn">Se hela menyn →</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ OM OSS ════════════════════════════════ -->
+    <section id="om-oss" class="section om-oss-section">
+        <div class="container om-oss-grid">
+            <div class="om-oss-text">
+                <p class="section-eyebrow">Om oss</p>
+                <h2 class="section-title">Vi är inte bara en restaurang, vi är <span>gemenskap</span></h2>
+                <p class="om-oss-body">
+                    Vi håller en fotbollsturnering varje sommar för att stärka sammanhållningen
+                    och gemenskapen med våra kära kunder. Halloweenfest varje år där vi utser
+                    en vinnare för bästa klädsel. Hos oss hittar du alltid en anledning att fira!
+                </p>
+            </div>
+            <div class="om-oss-images">
+                <div class="om-img-main">
+                    <img src="https://static.wixstatic.com/media/e10f32_5afe246805b84b84b0b72118623fcda9~mv2.jpeg/v1/fill/w_800,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Royal%20thai%20fotboll.jpeg"
+                        alt="Royal Thai SportsBar fotbollsturnering" loading="lazy" />
+                </div>
+                <div class="om-img-grid">
+                    <div class="om-img-small">
+                        <img src="https://static.wixstatic.com/media/e10f32_1452037a2b8e4a618201fc1a38d5ff4a~mv2.jpeg/v1/fill/w_400,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_1452037a2b8e4a618201fc1a38d5ff4a~mv2.jpeg"
+                            alt="Halloweenfest på Royal Thai SportsBar" loading="lazy" />
+                    </div>
+                    <div class="om-img-small">
+                        <img src="https://static.wixstatic.com/media/e10f32_b284ea8e515b40e18ff119b79342d220~mv2.jpg/v1/fill/w_400,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_b284ea8e515b40e18ff119b79342d220~mv2.jpg"
+                            alt="Gemenskap på Royal Thai SportsBar" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════ EVENEMANG ══════════════════════════════ -->
+    <section id="evenemang" class="section evenemang-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Evenemang</p>
+                <h2 class="section-title">Mer än bara <span>mat</span></h2>
+            </div>
+            <div class="events-grid">
+
+                <article class="event-card">
+                    <div class="event-img event-img--biljard"></div>
+                    <div class="event-body">
+                        <h3 class="event-title">Biljard &amp; Shuffleboard</h3>
+                        <p class="event-desc">Utmana vännerna och spendera en kväll av öl och skoj efter maten.</p>
+                        <span class="event-time">Löpande</span>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img event-img--blackjack"></div>
+                    <div class="event-body">
+                        <h3 class="event-title">BlackJack</h3>
+                        <p class="event-desc">Testa lyckan vid blackjack-bordet i en avslappnad och rolig atmosfär.</p>
+                        <span class="event-time">Fredag &amp; Lördag · 20:00–02:00</span>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img event-img--karaoke"></div>
+                    <div class="event-body">
+                        <h3 class="event-title">Karaoke</h3>
+                        <p class="event-desc">Ta mikrofonen och sjung loss! Varje Fredag &amp; Lördag.</p>
+                        <span class="event-time">Varje Fredag &amp; Lördag</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════ KONTAKT ════════════════════════════════ -->
+    <section id="kontakt" class="section kontakt-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Kontakt</p>
+                <h2 class="section-title">Hitta <span>oss</span></h2>
+            </div>
+
+            <div class="kontakt-grid">
+
+                <!-- Info -->
+                <div class="kontakt-info">
+                    <div class="kontakt-block">
+                        <h3>Adress</h3>
+                        <p>Tunnbygatan 2<br />Bromölla</p>
+                    </div>
+                    <div class="kontakt-block">
+                        <h3>Öppettider</h3>
+                        <table class="hours-table">
+                            <tbody>
+                                <tr>
+                                    <td>Måndag</td>
+                                    <td>16:00 – 22:00</td>
+                                </tr>
+                                <tr class="closed">
+                                    <td>Tisdag</td>
+                                    <td>Stängt</td>
+                                </tr>
+                                <tr>
+                                    <td>Onsdag</td>
+                                    <td>11:30 – 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Torsdag</td>
+                                    <td>11:30 – 02:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Fredag</td>
+                                    <td>11:30 – 02:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Lördag</td>
+                                    <td>12:00 – 02:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Söndag</td>
+                                    <td>12:00 – 22:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="kontakt-block">
+                        <h3>Telefon</h3>
+                        <p><a href="tel:045622689">0456-226 89</a><br /><a href="tel:0761697885">076-169 78 85</a></p>
+                    </div>
+                    <div class="kontakt-block">
+                        <h3>E-post</h3>
+                        <p><a href="mailto:royalthaisportsbar@gmail.com">royalthaisportsbar@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="kontakt-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2227.437!2d14.0747!3d56.0811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465419c53c68b4a1%3A0xd3b99c4c1c571df1!2sTunnbygatan%202%2C%20295%2031%20Brom%C3%B6lla!5e0!3m2!1ssv!2sse!4v1700000000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Karta till Royal Thai SportsBar">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                Royal Thai <span>SportsBar</span>
+            </div>
+            <div class="footer-info">
+                <p>Tunnbygatan 2, Bromölla</p>
+                <p><a href="tel:045622689">0456-226 89</a> · <a
+                        href="mailto:royalthaisportsbar@gmail.com">royalthaisportsbar@gmail.com</a></p>
+            </div>
+            <p class="footer-copy">&copy; 2025 Royal Thai SportsBar. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
