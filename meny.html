@@ -461,6 +461,135 @@
                                 display: none;
                         }
                 }
+
+                /* ── Mobil: floating kategorimeny ─────── */
+                .m-mob-fab {
+                        display: none;
+                        position: fixed;
+                        bottom: 24px;
+                        right: 20px;
+                        z-index: 200;
+                        background: var(--gold);
+                        color: #0D0D0D;
+                        border: none;
+                        border-radius: 50px;
+                        padding: 12px 20px;
+                        font-family: var(--ff-body);
+                        font-size: 0.8rem;
+                        font-weight: 700;
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+                        transition: transform 0.2s, box-shadow 0.2s;
+                }
+
+                .m-mob-fab:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 28px rgba(201, 168, 76, 0.5);
+                }
+
+                .m-mob-overlay {
+                        display: none;
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(0, 0, 0, 0.6);
+                        z-index: 300;
+                        backdrop-filter: blur(4px);
+                }
+
+                .m-mob-overlay.is-open {
+                        display: block;
+                }
+
+                .m-mob-sheet {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 400;
+                        background: #1a1a1a;
+                        border-top: 1px solid rgba(201, 168, 76, 0.25);
+                        border-radius: 20px 20px 0 0;
+                        padding: 16px 24px 40px;
+                        transform: translateY(100%);
+                        transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+                        max-height: 75vh;
+                        overflow-y: auto;
+                }
+
+                .m-mob-sheet.is-open {
+                        transform: translateY(0);
+                }
+
+                .m-mob-sheet-head {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 16px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+                }
+
+                .m-mob-sheet-title {
+                        font-size: 0.65rem;
+                        font-weight: 700;
+                        letter-spacing: 0.3em;
+                        text-transform: uppercase;
+                        color: rgba(201, 168, 76, 0.6);
+                }
+
+                .m-mob-close {
+                        background: none;
+                        border: none;
+                        color: rgba(245, 240, 232, 0.5);
+                        font-size: 1.4rem;
+                        cursor: pointer;
+                        line-height: 1;
+                        padding: 0 4px;
+                        transition: color 0.2s;
+                }
+
+                .m-mob-close:hover {
+                        color: var(--gold);
+                }
+
+                .m-mob-links {
+                        list-style: none;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 8px;
+                }
+
+                .m-mob-link {
+                        display: block;
+                        padding: 10px 14px;
+                        background: rgba(255, 255, 255, 0.04);
+                        border: 1px solid rgba(201, 168, 76, 0.1);
+                        border-radius: 8px;
+                        font-size: 0.78rem;
+                        font-weight: 500;
+                        letter-spacing: 0.06em;
+                        text-transform: uppercase;
+                        color: rgba(245, 240, 232, 0.65);
+                        text-align: center;
+                        transition: background 0.2s, color 0.2s, border-color 0.2s;
+                }
+
+                .m-mob-link:hover,
+                .m-mob-link:active {
+                        background: rgba(201, 168, 76, 0.12);
+                        color: var(--gold);
+                        border-color: rgba(201, 168, 76, 0.3);
+                }
+
+                @media (max-width: 900px) {
+                        .m-mob-fab {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                        }
+                }
         </style>
 </head>
 
@@ -500,6 +629,36 @@
                 </div>
         </section>
 
+        <!-- Mobil: floating kategorimeny -->
+        <button class="m-mob-fab" id="mob-cat-btn" aria-label="Visa kategorier">
+                ☰ Kategorier
+        </button>
+        <div class="m-mob-overlay" id="mob-overlay"></div>
+        <div class="m-mob-sheet" id="mob-sheet" role="dialog" aria-label="Menykategorier">
+                <div class="m-mob-sheet-head">
+                        <span class="m-mob-sheet-title">Hoppa till kategori</span>
+                        <button class="m-mob-close" id="mob-close" aria-label="Stäng">&times;</button>
+                </div>
+                <ul class="m-mob-links">
+                        <li><a class="m-mob-link" href="#specialratter">Specialrätter</a></li>
+                        <li><a class="m-mob-link" href="#forratter">Förrätter</a></li>
+                        <li><a class="m-mob-link" href="#svenska">Svenska</a></li>
+                        <li><a class="m-mob-link" href="#biff">Biff</a></li>
+                        <li><a class="m-mob-link" href="#kyckling">Kyckling</a></li>
+                        <li><a class="m-mob-link" href="#flask">Fläsk</a></li>
+                        <li><a class="m-mob-link" href="#ankratter">Anka</a></li>
+                        <li><a class="m-mob-link" href="#skaldjur">Skaldjur</a></li>
+                        <li><a class="m-mob-link" href="#risnudel">Ris &amp; Nudel</a></li>
+                        <li><a class="m-mob-link" href="#thai">Thai – Biff</a></li>
+                        <li><a class="m-mob-link" href="#thai-kyckling">Thai – Kyckling</a></li>
+                        <li><a class="m-mob-link" href="#thai-rakor">Thai – Räkor</a></li>
+                        <li><a class="m-mob-link" href="#barn">Barnmat</a></li>
+                        <li><a class="m-mob-link" href="#vegetarisk">Vegetarisk</a></li>
+                        <li><a class="m-mob-link" href="#dessert">Dessert</a></li>
+                        <li><a class="m-mob-link" href="#tillbehor">Tillbehör</a></li>
+                </ul>
+        </div>
+
         <!-- MENU -->
         <div class="m-layout">
 
@@ -507,11 +666,13 @@
                 <aside class="m-sidebar" aria-label="Menykategorier">
                         <p class="m-sidebar-label">Kategorier</p>
                         <ul class="m-sidebar-links">
+                                <li><a class="m-sidebar-link" href="#specialratter">Specialrätter</a></li>
                                 <li><a class="m-sidebar-link" href="#forratter">Förrätter</a></li>
                                 <li><a class="m-sidebar-link" href="#svenska">Svenska</a></li>
                                 <li><a class="m-sidebar-link" href="#biff">Biff</a></li>
                                 <li><a class="m-sidebar-link" href="#kyckling">Kyckling</a></li>
                                 <li><a class="m-sidebar-link" href="#flask">Fläsk</a></li>
+                                <li><a class="m-sidebar-link" href="#ankratter">Anka</a></li>
                                 <li><a class="m-sidebar-link" href="#skaldjur">Skaldjur</a></li>
                                 <li><a class="m-sidebar-link" href="#risnudel">Ris & Nudel</a></li>
                                 <li><a class="m-sidebar-link" href="#thai">Thai – Biff</a></li>
@@ -526,6 +687,30 @@
 
                 <main class="m-body">
 
+                        <!-- ── Specialrätter ──────────────────────── -->
+                        <section class="m-cat" id="specialratter">
+                                <div class="m-cat-head">
+                                        <span class="m-cat-ornament">✦</span>
+                                        <h2 class="m-cat-title">Specialrätter</h2>
+                                        <span class="m-cat-rule"></span>
+                                </div>
+                                <div class="m-row"><span class="m-num">M3.</span><span class="m-name">Tre små
+                                                rätter</span><span class="m-dots"></span><span class="m-price">135
+                                                kr</span></div>
+                                <div class="m-row"><span class="m-num">M4.</span><span class="m-name">Fyra små rätter
+                                                <small
+                                                        style="display:block;font-size:0.78em;color:rgba(245,240,232,0.4);font-style:italic;margin-top:2px;">Biff
+                                                        med bambuskott, kyckling i curry, friterat fläsk &amp; friterade
+                                                        räkor</small></span><span class="m-dots"></span><span
+                                                class="m-price">135 kr</span></div>
+                                <div class="m-row"><span class="m-num">M5.</span><span class="m-name">Fem små rätter för
+                                                2 pers.</span><span class="m-dots"></span><span class="m-price">445
+                                                kr</span></div>
+                        </section>
+
+                        <div class="m-divider"><span class="m-divider-line"></span><span
+                                        class="m-divider-sym">✦</span><span class="m-divider-line"></span></div>
+
                         <!-- ── Förrätter ──────────────────────────── -->
                         <section class="m-cat" id="forratter">
                                 <div class="m-cat-head">
@@ -533,22 +718,12 @@
                                         <h2 class="m-cat-title">Förrätter</h2>
                                         <span class="m-cat-rule"></span>
                                 </div>
-                                <div class="m-row"><span class="m-num">M3.</span><span class="m-name">Tre små
-                                                rätter</span><span class="m-dots"></span><span class="m-price">125
+                                <div class="m-row"><span class="m-num">1.</span><span class="m-name">Kinesisk
+                                                vårrulle</span><span class="m-dots"></span><span class="m-price">55
                                                 kr</span></div>
-                                <div class="m-row"><span class="m-num">M5.</span><span class="m-name">Fem små rätter för
-                                                2
-                                                pers.</span><span class="m-dots"></span><span class="m-price">435
-                                                kr</span>
-                                </div>
-                                <div class="m-row"><span class="m-num">1.</span><span class="m-name">Vårrulle 1
-                                                st</span><span class="m-dots"></span><span class="m-price">20 kr</span>
-                                </div>
                                 <div class="m-row"><span class="m-num">2.</span><span class="m-name">Thai stil vårrulle
-                                                med
-                                                räkor 1 st</span><span class="m-dots"></span><span class="m-price">25
-                                                kr</span>
-                                </div>
+                                                med räkor 1 st</span><span class="m-dots"></span><span
+                                                class="m-price">25 kr</span></div>
                                 <div class="m-row"><span class="m-num">3.</span><span class="m-name">Dumpling (Gyoza) 6
                                                 st</span><span class="m-dots"></span><span class="m-price">55 kr</span>
                                 </div>
@@ -556,10 +731,8 @@
                                                 class="m-name">Räkcocktail</span><span class="m-dots"></span><span
                                                 class="m-price">85 kr</span></div>
                                 <div class="m-row"><span class="m-num">5.</span><span class="m-name">Thaisallad med biff
-                                                /
-                                                kyckling</span><span class="m-dots"></span><span class="m-price">95
-                                                kr</span>
-                                </div>
+                                                / kyckling</span><span class="m-dots"></span><span class="m-price">95
+                                                kr</span></div>
                         </section>
 
                         <div class="m-divider"><span class="m-divider-line"></span><span
@@ -719,6 +892,30 @@
                                                 curry</span><span class="m-dots"></span><span class="m-price">120
                                                 kr</span>
                                 </div>
+                        </section>
+
+                        <div class="m-divider"><span class="m-divider-line"></span><span
+                                        class="m-divider-sym">✦</span><span class="m-divider-line"></span></div>
+
+                        <!-- ── Ankrätter ─────────────────────────── -->
+                        <section class="m-cat" id="ankratter">
+                                <div class="m-cat-head">
+                                        <span class="m-cat-ornament">✦</span>
+                                        <h2 class="m-cat-title">Ankrätter</h2>
+                                        <span class="m-cat-rule"></span>
+                                </div>
+                                <div class="m-row"><span class="m-num">91.</span><span class="m-name">Anka med
+                                                champinjoner &amp; bambuskott</span><span class="m-dots"></span><span
+                                                class="m-price">179 kr</span></div>
+                                <div class="m-row"><span class="m-num">92.</span><span class="m-name">Anka med ananas
+                                                &amp; grönsaker</span><span class="m-dots"></span><span
+                                                class="m-price">179 kr</span></div>
+                                <div class="m-row"><span class="m-num">93.</span><span class="m-name">Anka med grönsaker
+                                                &amp; lök</span><span class="m-dots"></span><span class="m-price">179
+                                                kr</span></div>
+                                <div class="m-row"><span class="m-num">94.</span><span class="m-name">Friterad anka med
+                                                sötsur sås eller currysås</span><span class="m-dots"></span><span
+                                                class="m-price">179 kr</span></div>
                         </section>
 
                         <div class="m-divider"><span class="m-divider-line"></span><span
@@ -1071,6 +1268,40 @@
                                         e.preventDefault();
                                         const target = document.querySelector(link.getAttribute('href'));
                                         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                });
+                        });
+                })();
+
+                /* ── Mobil: kategori bottom sheet ────────────────── */
+                (function () {
+                        const fab = document.getElementById('mob-cat-btn');
+                        const overlay = document.getElementById('mob-overlay');
+                        const sheet = document.getElementById('mob-sheet');
+                        const close = document.getElementById('mob-close');
+                        const mobLinks = document.querySelectorAll('.m-mob-link');
+
+                        function openSheet() {
+                                overlay.classList.add('is-open');
+                                sheet.classList.add('is-open');
+                                document.body.style.overflow = 'hidden';
+                        }
+                        function closeSheet() {
+                                overlay.classList.remove('is-open');
+                                sheet.classList.remove('is-open');
+                                document.body.style.overflow = '';
+                        }
+
+                        fab.addEventListener('click', openSheet);
+                        close.addEventListener('click', closeSheet);
+                        overlay.addEventListener('click', closeSheet);
+
+                        /* Stäng och scrolla när användaren klickar en kategori */
+                        mobLinks.forEach(link => {
+                                link.addEventListener('click', e => {
+                                        e.preventDefault();
+                                        const target = document.querySelector(link.getAttribute('href'));
+                                        closeSheet();
+                                        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350);
                                 });
                         });
                 })();
