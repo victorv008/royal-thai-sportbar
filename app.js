@@ -97,16 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveNav();
     }
 
-    /* ── PARALLAX HERO ───────────────────────────────────────── */
-    const heroBg = document.querySelector('.hero-bg');
-
-    if (heroBg && window.matchMedia('(min-width: 641px)').matches) {
-        function updateParallax() {
-            const scrollY = window.scrollY;
-            heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
-        }
-        window.addEventListener('scroll', updateParallax, { passive: true });
-    }
+    /* Parallax inaktiverat — bilden är nu fast */
 
     /* ── SCROLL REVEAL ANIMATIONS ────────────────────────────── */
     const revealEls = document.querySelectorAll(
