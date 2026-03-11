@@ -144,6 +144,10 @@
                         <img src="https://static.wixstatic.com/media/e10f32_b284ea8e515b40e18ff119b79342d220~mv2.jpg/v1/fill/w_400,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_b284ea8e515b40e18ff119b79342d220~mv2.jpg"
                             alt="Gemenskap på Royal Thai SportsBar" loading="lazy" />
                     </div>
+                    <div class="om-img-small">
+                        <img src="https://static.wixstatic.com/media/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg"
+                            alt="Biljard på Royal Thai SportsBar" loading="lazy" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,32 +162,43 @@
             </div>
             <div class="events-grid">
 
-                <article class="event-card">
-                    <div class="event-img event-img--biljard"></div>
+                <!-- Stor featured-kort: Biljard & Shuffleboard -->
+                <article class="event-card event-card--featured">
+                    <!-- Split: biljard (vänster) + shuffleboard (höger) -->
+                    <div class="event-img-split">
+                        <div class="event-img-half event-img-half--biljard" data-label="Biljard"></div>
+                        <div class="event-img-split-divider"></div>
+                        <div class="event-img-half event-img-half--shuffleboard" data-label="Shuffleboard"></div>
+                    </div>
                     <div class="event-body">
                         <h3 class="event-title">Biljard &amp; Shuffleboard</h3>
-                        <p class="event-desc">Utmana vännerna och spendera en kväll av öl och skoj efter maten.</p>
+                        <p class="event-desc">Utmana vännerna och spendera en kväll av öl och skoj efter maten. Vi har alltid ett biljardbord redo för dig.</p>
                         <span class="event-time">Löpande</span>
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <div class="event-img event-img--blackjack"></div>
-                    <div class="event-body">
-                        <h3 class="event-title">BlackJack</h3>
-                        <p class="event-desc">Testa lyckan vid blackjack-bordet i en avslappnad och rolig atmosfär.</p>
-                        <span class="event-time">Fredag &amp; Lördag · 20:00–02:00</span>
-                    </div>
-                </article>
+                <!-- Rad under: BlackJack + Karaoke -->
+                <div class="events-row">
 
-                <article class="event-card">
-                    <div class="event-img event-img--karaoke"></div>
-                    <div class="event-body">
-                        <h3 class="event-title">Karaoke</h3>
-                        <p class="event-desc">Ta mikrofonen och sjung loss! Varje Fredag &amp; Lördag.</p>
-                        <span class="event-time">Varje Fredag &amp; Lördag</span>
-                    </div>
-                </article>
+                    <article class="event-card">
+                        <div class="event-img event-img--blackjack"></div>
+                        <div class="event-body">
+                            <h3 class="event-title">BlackJack</h3>
+                            <p class="event-desc">Testa lyckan vid blackjack-bordet i en avslappnad och rolig atmosfär.</p>
+                            <span class="event-time">Fredag &amp; Lördag · 20:00–02:00</span>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-img event-img--karaoke"></div>
+                        <div class="event-body">
+                            <h3 class="event-title">Karaoke</h3>
+                            <p class="event-desc">Ta mikrofonen och sjung loss! Varje Fredag &amp; Lördag.</p>
+                            <span class="event-time">Varje Fredag &amp; Lördag</span>
+                        </div>
+                    </article>
+
+                </div>
 
             </div>
         </div>

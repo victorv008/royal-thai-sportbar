@@ -247,12 +247,71 @@ button {
     transition: var(--transition);
 }
 
-.hamburger.is-open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+/* ── Split featured image (biljard + shuffleboard) ────────────── */
+.event-img-split {
+    flex: 1;
+    display: flex;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
 }
 
-.hamburger.is-open span:nth-child(2) {
-    opacity: 0;
+.event-img-half {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: flex 0.4s ease;
+}
+
+.event-img-half:hover {
+    flex: 1.2;
+}
+
+.event-img-split-divider {
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+    opacity: 0.7;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.event-img-half::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent 60%);
+}
+
+.event-img-half--biljard {
+    background-image: url('images/biljard.jpg');
+    background-position: center 40%;
+}
+
+.event-img-half--shuffleboard {
+    background-image: url('https://static.wixstatic.com/media/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg');
+    background-position: center 30%;
+}
+
+/* Label overlays on each half */
+.event-img-half--biljard::before,
+.event-img-half--shuffleboard::before {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    background: rgba(0,0,0,0.55);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(201,168,76,0.3);
+    white-space: nowrap;
+    z-index: 3;
 }
 
 .hamburger.is-open span:nth-child(3) {
@@ -607,7 +666,7 @@ button {
 
 .om-img-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
 
@@ -648,7 +707,45 @@ button {
 
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+/* Featured biljard card — full width on top */
+.event-card--featured {
+    display: flex;
+    flex-direction: row;
+    min-height: 320px;
+}
+
+.event-card--featured .event-img {
+    flex: 1;
+    height: auto;
+    min-height: 320px;
+}
+
+.event-card--featured .event-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 320px;
+    padding: 36px;
+}
+
+.event-card--featured .event-title {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+}
+
+.event-card--featured .event-desc {
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+
+/* Row of two cards below */
+.events-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
@@ -682,18 +779,22 @@ button {
 
 /* Real event photos from the Royal Thai SportsBar */
 .event-img--biljard {
-    background-image: url('https://static.wixstatic.com/media/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_8682d359f7c54677a05fb19a47278e68~mv2.jpg');
+    background-image: url('images/biljard.jpg');
     background-color: #1a1210;
+    background-position: center 35%;
 }
 
 .event-img--blackjack {
-    background-image: url('https://static.wixstatic.com/media/e10f32_869220ff788c49d5a21ddf912c2be2cf~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_869220ff788c49d5a21ddf912c2be2cf~mv2.jpg');
-    background-color: #0d1a10;
+    background-image: url('images/blackjack.jpg');
+    background-color: #0d1010;
+    background-position: center 65%;
+    background-size: 120%;
 }
 
 .event-img--karaoke {
     background-image: url('https://static.wixstatic.com/media/e10f32_fa8fbf1a85e5420cb51e9599e3eabc5cf000.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e10f32_fa8fbf1a85e5420cb51e9599e3eabc5cf000.jpg');
     background-color: #1a0d1a;
+    background-position: center 30%;
 }
 
 .event-body {
@@ -881,7 +982,16 @@ button {
 
 /* Tablet */
 @media (max-width: 900px) {
-    .events-grid {
+    .event-card--featured {
+        flex-direction: column;
+    }
+
+    .event-card--featured .event-body {
+        flex: none;
+        padding: 24px;
+    }
+
+    .events-row {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -965,7 +1075,7 @@ button {
     }
 
     /* Events */
-    .events-grid {
+    .events-row {
         grid-template-columns: 1fr;
     }
 
