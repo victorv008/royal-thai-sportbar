@@ -30,47 +30,47 @@
             "ratter": [
                 {
                     "namn": "Kinesisk vårrulle",
-                    "pris": 60,
+                    "pris": 55,
                     "nr": "1."
                 },
                 {
                     "namn": "Vårrulle Thai stil",
-                    "pris": 60,
+                    "pris": 55,
                     "nr": "2."
                 },
                 {
                     "namn": "Vårrulle vegetarian",
-                    "pris": 60,
+                    "pris": 55,
                     "nr": "3."
                 },
                 {
                     "namn": "Räkchips (20 st)",
-                    "pris": 45,
+                    "pris": 40,
                     "nr": "4."
                 },
                 {
                     "namn": "Vitlöksbröd",
-                    "pris": 45,
+                    "pris": 40,
                     "nr": "5."
                 },
                 {
                     "namn": "Kycklingsoppa",
-                    "pris": 65,
+                    "pris": 60,
                     "nr": "6."
                 },
                 {
                     "namn": "Pekingsoppa",
-                    "pris": 65,
+                    "pris": 60,
                     "nr": "8."
                 },
                 {
                     "namn": "Tom yam gong soppa",
-                    "pris": 80,
+                    "pris": 60,
                     "nr": "9."
                 },
                 {
                     "namn": "Pommes",
-                    "pris": 50,
+                    "pris": 45,
                     "nr": "10."
                 }
             ]
@@ -81,47 +81,47 @@
             "ratter": [
                 {
                     "namn": "Oxfilé med stekt potatis & pepparsås",
-                    "pris": 229,
+                    "pris": 219,
                     "nr": "101."
                 },
                 {
                     "namn": "Lövbiff med pommes & kryddsmör",
-                    "pris": 169,
+                    "pris": 159,
                     "nr": "102."
                 },
                 {
                     "namn": "Entrecôte med stekt potatis & bearnaisesås",
-                    "pris": 209,
+                    "pris": 199,
                     "nr": "103."
                 },
                 {
                     "namn": "Fläskfilé med stekt potatis & bearnaisesås",
-                    "pris": 179,
+                    "pris": 169,
                     "nr": "104."
                 },
                 {
                     "namn": "Panerad schnitzel med stekt potatis & bearnaisesås",
-                    "pris": 149,
+                    "pris": 139,
                     "nr": "105."
                 },
                 {
                     "namn": "Spätta med remouladsås & potatis",
-                    "pris": 149,
+                    "pris": 139,
                     "nr": "106."
                 },
                 {
                     "namn": "Black and white stekt potatis & bearnaisesås",
-                    "pris": 229,
+                    "pris": 219,
                     "nr": "107."
                 },
                 {
                     "namn": "Kycklingfilé med stekt potatis & bearnaisesås",
-                    "pris": 179,
+                    "pris": 169,
                     "nr": "108."
                 },
                 {
                     "namn": "Hamburgertallrik med pommes, ägg & ost",
-                    "pris": 139,
+                    "pris": 129,
                     "nr": "109."
                 }
             ]
@@ -132,27 +132,27 @@
             "ratter": [
                 {
                     "namn": "Biff med champinjoner & bambuskott",
-                    "pris": 140,
+                    "pris": 130,
                     "nr": "25."
                 },
                 {
                     "namn": "Biff med blandade grönsaker",
-                    "pris": 140,
+                    "pris": 130,
                     "nr": "26."
                 },
                 {
                     "namn": "Biff i curry med blandade grönsaker",
-                    "pris": 140,
+                    "pris": 130,
                     "nr": "27."
                 },
                 {
                     "namn": "Szechuan biff",
-                    "pris": 140,
+                    "pris": 130,
                     "nr": "29."
                 },
                 {
                     "namn": "Biff med lök",
-                    "pris": 140,
+                    "pris": 130,
                     "nr": "32."
                 }
             ]
@@ -163,47 +163,47 @@
             "ratter": [
                 {
                     "namn": "Kyckling med champinjoner & bambuskott",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "35."
                 },
                 {
                     "namn": "Kyckling med blandade grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "36."
                 },
                 {
                     "namn": "Kyckling i curry med blandade grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "37."
                 },
                 {
                     "namn": "Kyckling med ananas",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "38."
                 },
                 {
                     "namn": "Szechuan kyckling, grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "39."
                 },
                 {
                     "namn": "Szechuan kyckling med cashew, grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "41."
                 },
                 {
                     "namn": "Kyckling med räkor & cashewnötter",
-                    "pris": 130,
+                    "pris": 140,
                     "nr": "42."
                 },
                 {
                     "namn": "Kycklingspett med jordnötssås",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "43."
                 },
                 {
                     "namn": "Friterad kyckling med sötsur sås eller currysås",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "44."
                 }
             ]
@@ -214,22 +214,22 @@
             "ratter": [
                 {
                     "namn": "Fläsk med champinjoner & bambuskott",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "45."
                 },
                 {
                     "namn": "Fläsk med grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "46."
                 },
                 {
                     "namn": "Szechuanfläsk med grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "49."
                 },
                 {
                     "namn": "Friterat fläsk med sötsur eller currysås",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "50."
                 }
             ]
@@ -240,27 +240,27 @@
             "ratter": [
                 {
                     "namn": "Anka med champinjoner & grönsaker",
-                    "pris": 185,
+                    "pris": 179,
                     "nr": "51."
                 },
                 {
                     "namn": "Anka med ananas & grönsaker",
-                    "pris": 185,
+                    "pris": 179,
                     "nr": "52."
                 },
                 {
                     "namn": "Szechuananka, grönsaker",
-                    "pris": 185,
+                    "pris": 179,
                     "nr": "53."
                 },
                 {
                     "namn": "Anka med plommonsås & grönsaker",
-                    "pris": 185,
+                    "pris": 179,
                     "nr": "54."
                 },
                 {
                     "namn": "Friterad anka med grönsaker",
-                    "pris": 185,
+                    "pris": 179,
                     "nr": "55."
                 }
             ]
@@ -271,37 +271,37 @@
             "ratter": [
                 {
                     "namn": "Räkor med vitlök & grönsaker",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "57."
                 },
                 {
                     "namn": "Bläckfisk med vitlök & grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "58."
                 },
                 {
                     "namn": "Szechuan jätteräkor med grönsaker",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "59."
                 },
                 {
                     "namn": "Szechuan bläckfisk med grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "60."
                 },
                 {
                     "namn": "Räkspett med jordnötssås & grönsaker",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "61."
                 },
                 {
                     "namn": "Friterad bläckfisk med sötsur sås eller currysås",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "63."
                 },
                 {
                     "namn": "Friterade jätteräkor med sötsur sås eller currysås",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "64."
                 }
             ]
@@ -312,42 +312,42 @@
             "ratter": [
                 {
                     "namn": "Stekt ris deluxe, räkor, kyckling, grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "65."
                 },
                 {
                     "namn": "Stekt ris med kyckling, grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "66."
                 },
                 {
                     "namn": "Stekt ris med räkor, grönsaker",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "67."
                 },
                 {
                     "namn": "Nasi Goreng (stekt ris, räkor, kyckling, curry)",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "68."
                 },
                 {
                     "namn": "Stekta nudlar Deluxe, räkor, kyckling, grönsaker",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "69."
                 },
                 {
                     "namn": "Bambi Goreng (stekta nudlar, räkor, kyckling, curry)",
-                    "pris": 130,
+                    "pris": 125,
                     "nr": "70."
                 },
                 {
                     "namn": "Thaistekta nudlar med skaldjur",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "71."
                 },
                 {
                     "namn": "Pad thai (risnudlar med kyckling och grönsaker)",
-                    "pris": 150,
+                    "pris": 145,
                     "nr": "72."
                 }
             ]
@@ -358,37 +358,37 @@
             "ratter": [
                 {
                     "namn": "Biff med röd curry, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "74."
                 },
                 {
                     "namn": "Biff med grön curry, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "75."
                 },
                 {
                     "namn": "Biff med stark ostronsås, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "76."
                 },
                 {
                     "namn": "Biff med stark gräddsås, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "77."
                 },
                 {
                     "namn": "Biff med stark sötsur sås, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "78."
                 },
                 {
                     "namn": "Biff med stark svartpepparsås, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "79."
                 },
                 {
                     "namn": "Biff med lök och stark ingefärssås, grönsaker",
-                    "pris": 140,
+                    "pris": 135,
                     "nr": "80."
                 }
             ]
@@ -399,77 +399,77 @@
             "ratter": [
                 {
                     "namn": "Kyckling med röd curry, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "84."
                 },
                 {
                     "namn": "Kyckling med grön curry, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "85."
                 },
                 {
                     "namn": "Kyckling med stark ostronsås, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "86."
                 },
                 {
                     "namn": "Kyckling med stark vitlökssås, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "87."
                 },
                 {
                     "namn": "Kyckling med stark sötsur sås och grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "88."
                 },
                 {
                     "namn": "Kyckling med stark svartpepparsås, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "89."
                 },
                 {
                     "namn": "Kyckling med lök och stark ingefärssås, grönsaker",
-                    "pris": 135,
+                    "pris": 130,
                     "nr": "90."
                 },
                 {
                     "namn": "Tom yam räkor/kyckling, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "92."
                 },
                 {
                     "namn": "Räkor med röd curry, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "94."
                 },
                 {
                     "namn": "Räkor med grön curry, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "95."
                 },
                 {
                     "namn": "Räkor med stark ostronsås, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "96."
                 },
                 {
                     "namn": "Räkor med stark vitlökssås, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "97."
                 },
                 {
                     "namn": "Räkor med stark sötsur sås, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "98."
                 },
                 {
                     "namn": "Skaldjur deluxe med stark ostronsås, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "99."
                 },
                 {
                     "namn": "Tom Yam skaldjur deluxe, grönsaker",
-                    "pris": 160,
+                    "pris": 155,
                     "nr": "100."
                 }
             ]
@@ -480,22 +480,22 @@
             "ratter": [
                 {
                     "namn": "Korv med pommes",
-                    "pris": 80,
+                    "pris": 75,
                     "nr": "B1."
                 },
                 {
                     "namn": "Friterad kyckling med pommes",
-                    "pris": 80,
+                    "pris": 75,
                     "nr": "B2."
                 },
                 {
                     "namn": "Spaghetti med köttfärssås",
-                    "pris": 80,
+                    "pris": 75,
                     "nr": "B3."
                 },
                 {
                     "namn": "Köttbullar med pommes",
-                    "pris": 80,
+                    "pris": 75,
                     "nr": "B4."
                 }
             ]
@@ -506,27 +506,27 @@
             "ratter": [
                 {
                     "namn": "Grönsaker med röd curry, tofu",
-                    "pris": 135,
+                    "pris": 125,
                     "nr": "V1."
                 },
                 {
                     "namn": "Wokade äggnudlar med grönsaker",
-                    "pris": 135,
+                    "pris": 125,
                     "nr": "V2."
                 },
                 {
                     "namn": "Wokade risnudlar med grönsaker",
-                    "pris": 135,
+                    "pris": 125,
                     "nr": "V3."
                 },
                 {
                     "namn": "Wokade ris med grönsaker",
-                    "pris": 135,
+                    "pris": 125,
                     "nr": "V4."
                 },
                 {
                     "namn": "Wokade grönsaker, cashewnötter",
-                    "pris": 135,
+                    "pris": 125,
                     "nr": "V5."
                 }
             ]
@@ -537,22 +537,22 @@
             "ratter": [
                 {
                     "namn": "Glass",
-                    "pris": 50,
+                    "pris": 45,
                     "nr": "110."
                 },
                 {
                     "namn": "Friterad banan med glass",
-                    "pris": 55,
+                    "pris": 50,
                     "nr": "111."
                 },
                 {
                     "namn": "Friterad ananas med glass",
-                    "pris": 55,
+                    "pris": 50,
                     "nr": "112."
                 },
                 {
                     "namn": "Glassbåten",
-                    "pris": 60,
+                    "pris": 55,
                     "nr": "113."
                 }
             ]

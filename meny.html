@@ -716,48 +716,149 @@
 
         <script src="app.js"></script>
         <script>
-                /* ── Ladda Meny Data (JSON) ───────────────────────── */
+                /* ══════════════════════════════════════════════════════
+                   MENY LOADER — Google Sheets med lokal JSON-fallback
+                   ══════════════════════════════════════════════════════
+                   INSTRUKTIONER:
+                   1. Klistra in ditt Google Sheet-ID nedan (mellan citattecknen)
+                   2. Sheetet måste vara publicerat: Arkiv → Dela → Publicera på webben → CSV
+                   3. Kolumner i sheetet: Kategori | Nr | Namn | Beskrivning | Pris
+                   Om Sheet-ID är tomt används den lokala meny-data.json som backup.
+                */
                 (function () {
                         const container = document.getElementById('menu-content');
                         if (!container) return;
 
-                        fetch('meny-data.json')
-                                .then(res => res.json())
-                                .then(data => {
-                                        let html = '';
-                                        data.kategorier.forEach(cat => {
-                                                html += `<section class="m-cat" id="${cat.id}">`;
-                                                html += `<div class="m-cat-head" ${cat.id === 'tillbehor' ? 'style="margin-bottom:1rem;"' : ''}>`;
-                                                if (cat.titel && cat.id !== 'tillbehor') {
-                                                        html += `<span class="m-cat-ornament">✦</span><h2 class="m-cat-title">${cat.titel}</h2><span class="m-cat-rule"></span>`;
-                                                }
-                                                html += `</div>`;
+                        /* ── CONFIG — klistra in ditt Google Sheet-ID här ── */
+                        const GOOGLE_SHEET_ID = '';
 
-                                                cat.ratter.forEach(item => {
-                                                        html += `<div class="m-row">`;
-                                                        html += `<span class="m-num">${item.nr ? item.nr : ''}</span>`;
-                                                        html += `<span class="m-name">${item.namn}`;
-                                                        if (item.desc) {
-                                                                html += `<small style="display:block;font-size:0.78em;color:rgba(245,240,232,0.4);font-style:italic;margin-top:2px;">${item.desc}</small>`;
-                                                        }
-                                                        html += `</span>`;
-                                                        html += `<span class="m-dots"></span>`;
-                                                        html += `<span class="m-price">${item.pris} kr</span>`;
-                                                        html += `</div>`;
+                        /* ── Kategori-namn → HTML-id mapping ────────────── */
+                        const ID_MAP = {
+                                'specialrätter': 'specialratter',
+                                'förrätter': 'forratter',
+                                'svenska rätter': 'svenska',
+                                'biffrätter': 'biff',
+                                'kycklingrätter': 'kyckling',
+                                'fläskrätter': 'flask',
+                                'ankrätter': 'ankratter',
+                                'skaldjursrätter': 'skaldjur',
+                                'ris och nudel rätter': 'risnudel',
+                                'thairätter (biff)': 'thai',
+                                'thairätter (kyckling & räkor)': 'thai-2',
+                                'barnmat': 'barn',
+                                'vegetariska rätter': 'vegetarisk',
+                                'dessert': 'dessert',
+                                'tillbehör': 'tillbehor'
+                        };
+
+                        /* ── Visa-namn (vad som visas i rubriken) ────────── */
+                        const DISPLAY_MAP = {
+                                'thairätter (biff)': 'Thairätter',
+                                'thairätter (kyckling & räkor)': 'Thairätter'
+                        };
+
+                        /* ── CSV-parser (hanterar citerade fält korrekt) ─── */
+                        function parseCSV(text) {
+                                const rows = []; let row = []; let f = ''; let q = false;
+                                for (let i = 0; i < text.length; i++) {
+                                        const c = text[i];
+                                        if (q) {
+                                                if (c === '"' && text[i + 1] === '"') { f += '"'; i++; }
+                                                else if (c === '"') q = false;
+                                                else f += c;
+                                        } else if (c === '"') { q = true; }
+                                        else if (c === ',') { row.push(f.trim()); f = ''; }
+                                        else if (c === '\n' || (c === '\r' && text[i + 1] === '\n')) {
+                                                row.push(f.trim()); f = '';
+                                                if (row.some(x => x)) rows.push(row);
+                                                row = [];
+                                                if (c === '\r') i++;
+                                        } else { f += c; }
+                                }
+                                if (f || row.length) { row.push(f.trim()); if (row.some(x => x)) rows.push(row); }
+                                return rows;
+                        }
+
+                        /* ── CSV → menydata (samma format som JSON-filen) ── */
+                        function csvToMenu(csv) {
+                                const rows = parseCSV(csv);
+                                if (rows.length < 2) throw new Error('Tom data');
+                                const h = rows[0].map(s => s.toLowerCase().trim());
+                                const ci = h.indexOf('kategori'), ni = h.indexOf('nr');
+                                const na = h.indexOf('namn'), di = h.indexOf('beskrivning'), pi = h.indexOf('pris');
+
+                                const kategorier = []; let cat = null; const seen = {};
+                                for (let i = 1; i < rows.length; i++) {
+                                        const r = rows[i];
+                                        if (!r[na] && !(r[pi] && r[pi] !== '0')) continue;
+                                        const rawCat = (r[ci] || (cat ? cat._raw : '')).trim();
+                                        const catKey = rawCat.toLowerCase();
+
+                                        if (!cat || cat._raw !== rawCat) {
+                                                const id = ID_MAP[catKey] || catKey.replace(/[åä]/g, 'a').replace(/ö/g, 'o').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                                                const titel = DISPLAY_MAP[catKey] || rawCat;
+                                                cat = { id: id, titel: titel, ratter: [], _raw: rawCat };
+                                                kategorier.push(cat);
+                                        }
+                                        const item = { namn: r[na] || '', pris: parseInt(r[pi]) || 0 };
+                                        if (r[ni]) item.nr = r[ni];
+                                        if (di >= 0 && r[di]) item.desc = r[di];
+                                        cat.ratter.push(item);
+                                }
+                                kategorier.forEach(c => delete c._raw);
+                                return { kategorier };
+                        }
+
+                        /* ── Hämta menydata ──────────────────────────────── */
+                        function fetchMenu() {
+                                if (GOOGLE_SHEET_ID) {
+                                        const url = 'https://docs.google.com/spreadsheets/d/' + GOOGLE_SHEET_ID + '/pub?gid=0&single=true&output=csv';
+                                        return fetch(url)
+                                                .then(function (r) { if (!r.ok) throw new Error(); return r.text(); })
+                                                .then(function (csv) { return csvToMenu(csv); })
+                                                .catch(function () {
+                                                        console.warn('Google Sheets ej tillgängligt, använder lokal JSON.');
+                                                        return fetch('meny-data.json?v=' + Date.now()).then(function (r) { return r.json(); });
                                                 });
-                                                html += `</section>`;
+                                }
+                                return fetch('meny-data.json?v=' + Date.now()).then(function (r) { return r.json(); });
+                        }
+
+                        /* ── Rendera menyn ────────────────────────────────── */
+                        fetchMenu()
+                                .then(function (data) {
+                                        let html = '';
+                                        data.kategorier.forEach(function (cat) {
+                                                html += '<section class="m-cat" id="' + cat.id + '">';
+                                                html += '<div class="m-cat-head"' + (cat.id === 'tillbehor' ? ' style="margin-bottom:1rem;"' : '') + '>';
+                                                if (cat.titel && cat.id !== 'tillbehor') {
+                                                        html += '<span class="m-cat-ornament">✦</span><h2 class="m-cat-title">' + cat.titel + '</h2><span class="m-cat-rule"></span>';
+                                                }
+                                                html += '</div>';
+
+                                                cat.ratter.forEach(function (item) {
+                                                        html += '<div class="m-row">';
+                                                        html += '<span class="m-num">' + (item.nr || '') + '</span>';
+                                                        html += '<span class="m-name">' + item.namn;
+                                                        if (item.desc) {
+                                                                html += '<small style="display:block;font-size:0.78em;color:rgba(245,240,232,0.4);font-style:italic;margin-top:2px;">' + item.desc + '</small>';
+                                                        }
+                                                        html += '</span>';
+                                                        html += '<span class="m-dots"></span>';
+                                                        html += '<span class="m-price">' + item.pris + ' kr</span>';
+                                                        html += '</div>';
+                                                });
+                                                html += '</section>';
 
                                                 if (cat.id !== 'tillbehor') {
-                                                        html += `<div class="m-divider"><span class="m-divider-line"></span><span class="m-divider-sym">✦</span><span class="m-divider-line"></span></div>`;
+                                                        html += '<div class="m-divider"><span class="m-divider-line"></span><span class="m-divider-sym">✦</span><span class="m-divider-line"></span></div>';
                                                 }
                                         });
                                         container.innerHTML = html;
                                         container.removeAttribute('style');
-
-                                        // Initiera scroll-trackern eftersom länkarna fäster in i de nya sektionerna nu
                                         if (window.initScrollTracker) window.initScrollTracker();
                                 })
-                                .catch(err => {
+                                .catch(function (err) {
                                         container.innerHTML = '<p style="color:var(--gold); text-align:center;">Det gick inte att ladda menyn.</p>';
                                         console.error('Fel vid laddning av meny:', err);
                                 });

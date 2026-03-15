@@ -1,0 +1,100 @@
+Kategori,Nr,Namn,Beskrivning,Pris
+Specialrätter,M3.,Tre små rätter,"Biff med stark ostronsås, kycklingspett, friterade räkor",135
+Specialrätter,M4.,Fyra små rätter,"Biff med bambuskott, kyckling i curry, friterat fläsk & friterade räkor",135
+Specialrätter,M5.,Fem små rätter för 2 pers.,"Förrätter: vårrulle vegetarisk — kycklingspett, biff med röd curry, räkspett, friterad fläsk, friterade räkor",445
+Förrätter,1.,Kinesisk vårrulle,,55
+Förrätter,2.,Vårrulle Thai stil,,55
+Förrätter,3.,Vårrulle vegetarian,,55
+Förrätter,4.,Räkchips (20 st),,40
+Förrätter,5.,Vitlöksbröd,,40
+Förrätter,6.,Kycklingsoppa,,60
+Förrätter,8.,Pekingsoppa,,60
+Förrätter,9.,Tom yam gong soppa,,60
+Förrätter,10.,Pommes,,45
+Svenska Rätter,101.,Oxfilé med stekt potatis & pepparsås,,219
+Svenska Rätter,102.,Lövbiff med pommes & kryddsmör,,159
+Svenska Rätter,103.,Entrecôte med stekt potatis & bearnaisesås,,199
+Svenska Rätter,104.,Fläskfilé med stekt potatis & bearnaisesås,,169
+Svenska Rätter,105.,Panerad schnitzel med stekt potatis & bearnaisesås,,139
+Svenska Rätter,106.,Spätta med remouladsås & potatis,,139
+Svenska Rätter,107.,Black and white stekt potatis & bearnaisesås,,219
+Svenska Rätter,108.,Kycklingfilé med stekt potatis & bearnaisesås,,169
+Svenska Rätter,109.,Hamburgertallrik med pommes ägg & ost,,129
+Biffrätter,25.,Biff med champinjoner & bambuskott,,130
+Biffrätter,26.,Biff med blandade grönsaker,,130
+Biffrätter,27.,Biff i curry med blandade grönsaker,,130
+Biffrätter,29.,Szechuan biff,,130
+Biffrätter,32.,Biff med lök,,130
+Kycklingrätter,35.,Kyckling med champinjoner & bambuskott,,125
+Kycklingrätter,36.,Kyckling med blandade grönsaker,,125
+Kycklingrätter,37.,Kyckling i curry med blandade grönsaker,,125
+Kycklingrätter,38.,Kyckling med ananas,,125
+Kycklingrätter,39.,"Szechuan kyckling, grönsaker",,125
+Kycklingrätter,41.,"Szechuan kyckling med cashew, grönsaker",,125
+Kycklingrätter,42.,Kyckling med räkor & cashewnötter,,140
+Kycklingrätter,43.,Kycklingspett med jordnötssås,,125
+Kycklingrätter,44.,Friterad kyckling med sötsur sås eller currysås,,125
+Fläskrätter,45.,Fläsk med champinjoner & bambuskott,,125
+Fläskrätter,46.,Fläsk med grönsaker,,125
+Fläskrätter,49.,Szechuanfläsk med grönsaker,,125
+Fläskrätter,50.,Friterat fläsk med sötsur eller currysås,,125
+Ankrätter,51.,Anka med champinjoner & grönsaker,,179
+Ankrätter,52.,Anka med ananas & grönsaker,,179
+Ankrätter,53.,"Szechuananka, grönsaker",,179
+Ankrätter,54.,Anka med plommonsås & grönsaker,,179
+Ankrätter,55.,Friterad anka med grönsaker,,179
+Skaldjursrätter,57.,Räkor med vitlök & grönsaker,,145
+Skaldjursrätter,58.,Bläckfisk med vitlök & grönsaker,,135
+Skaldjursrätter,59.,Szechuan jätteräkor med grönsaker,,145
+Skaldjursrätter,60.,Szechuan bläckfisk med grönsaker,,135
+Skaldjursrätter,61.,Räkspett med jordnötssås & grönsaker,,145
+Skaldjursrätter,63.,Friterad bläckfisk med sötsur sås eller currysås,,135
+Skaldjursrätter,64.,Friterade jätteräkor med sötsur sås eller currysås,,145
+Ris och Nudel Rätter,65.,"Stekt ris deluxe, räkor, kyckling, grönsaker",,125
+Ris och Nudel Rätter,66.,"Stekt ris med kyckling, grönsaker",,125
+Ris och Nudel Rätter,67.,"Stekt ris med räkor, grönsaker",,145
+Ris och Nudel Rätter,68.,"Nasi Goreng (stekt ris, räkor, kyckling, curry)",,125
+Ris och Nudel Rätter,69.,"Stekta nudlar Deluxe, räkor, kyckling, grönsaker",,125
+Ris och Nudel Rätter,70.,"Bambi Goreng (stekta nudlar, räkor, kyckling, curry)",,125
+Ris och Nudel Rätter,71.,Thaistekta nudlar med skaldjur,,145
+Ris och Nudel Rätter,72.,Pad thai (risnudlar med kyckling och grönsaker),,145
+Thairätter (Biff),74.,"Biff med röd curry, grönsaker",,135
+Thairätter (Biff),75.,"Biff med grön curry, grönsaker",,135
+Thairätter (Biff),76.,"Biff med stark ostronsås, grönsaker",,135
+Thairätter (Biff),77.,"Biff med stark gräddsås, grönsaker",,135
+Thairätter (Biff),78.,"Biff med stark sötsur sås, grönsaker",,135
+Thairätter (Biff),79.,"Biff med stark svartpepparsås, grönsaker",,135
+Thairätter (Biff),80.,"Biff med lök och stark ingefärssås, grönsaker",,135
+Thairätter (Kyckling & Räkor),84.,"Kyckling med röd curry, grönsaker",,130
+Thairätter (Kyckling & Räkor),85.,"Kyckling med grön curry, grönsaker",,130
+Thairätter (Kyckling & Räkor),86.,"Kyckling med stark ostronsås, grönsaker",,130
+Thairätter (Kyckling & Räkor),87.,"Kyckling med stark vitlökssås, grönsaker",,130
+Thairätter (Kyckling & Räkor),88.,"Kyckling med stark sötsur sås och grönsaker",,130
+Thairätter (Kyckling & Räkor),89.,"Kyckling med stark svartpepparsås, grönsaker",,130
+Thairätter (Kyckling & Räkor),90.,"Kyckling med lök och stark ingefärssås, grönsaker",,130
+Thairätter (Kyckling & Räkor),92.,"Tom yam räkor/kyckling, grönsaker",,155
+Thairätter (Kyckling & Räkor),94.,"Räkor med röd curry, grönsaker",,155
+Thairätter (Kyckling & Räkor),95.,"Räkor med grön curry, grönsaker",,155
+Thairätter (Kyckling & Räkor),96.,"Räkor med stark ostronsås, grönsaker",,155
+Thairätter (Kyckling & Räkor),97.,"Räkor med stark vitlökssås, grönsaker",,155
+Thairätter (Kyckling & Räkor),98.,"Räkor med stark sötsur sås, grönsaker",,155
+Thairätter (Kyckling & Räkor),99.,"Skaldjur deluxe med stark ostronsås, grönsaker",,155
+Thairätter (Kyckling & Räkor),100.,"Tom Yam skaldjur deluxe, grönsaker",,155
+Barnmat,B1.,Korv med pommes,,75
+Barnmat,B2.,Friterad kyckling med pommes,,75
+Barnmat,B3.,Spaghetti med köttfärssås,,75
+Barnmat,B4.,Köttbullar med pommes,,75
+Vegetariska Rätter,V1.,"Grönsaker med röd curry, tofu",,125
+Vegetariska Rätter,V2.,Wokade äggnudlar med grönsaker,,125
+Vegetariska Rätter,V3.,Wokade risnudlar med grönsaker,,125
+Vegetariska Rätter,V4.,Wokade ris med grönsaker,,125
+Vegetariska Rätter,V5.,"Wokade grönsaker, cashewnötter",,125
+Dessert,110.,Glass,,45
+Dessert,111.,Friterad banan med glass,,50
+Dessert,112.,Friterad ananas med glass,,50
+Dessert,113.,Glassbåten,,55
+Tillbehör,,Nudlar istället för ris,,20
+Tillbehör,,Extra sås,,15
+Tillbehör,,Extra ris,,20
+Tillbehör,,Extra soja eller sambal,,3
+Tillbehör,,Stor läsk (1.5 L),,35
