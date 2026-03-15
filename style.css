@@ -666,7 +666,7 @@ button {
 
 .om-img-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
 
@@ -679,8 +679,14 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.5s ease;
+}
+
+/* Gemenskap/celebration photo — portrait shot, focus on people's upper bodies */
+.om-img-small img[src*="e10f32_869220ff"] {
+    object-position: center 25%;
 }
 
 .om-img-main:hover img,
@@ -696,6 +702,162 @@ button {
     background: rgba(0, 0, 0, 0.5);
     padding: 4px 10px;
     border-radius: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO DELIVERY NOTE
+═══════════════════════════════════════════════════════════════ */
+.hero-delivery-note {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    letter-spacing: 0.04em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ERBJUDANDEN (Lunch & Afterwork)
+═══════════════════════════════════════════════════════════════ */
+.erbjudanden-section {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.erbjudanden-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.erbjudande-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.erbjudande-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201, 168, 76, 0.35);
+}
+
+.erbjudande-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.erbjudande-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+}
+
+.erbjudande-price {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.erbjudande-price span {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.erbjudande-time-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid var(--color-border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.erbjudande-desc {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.erbjudande-list {
+    list-style: none;
+    text-align: left;
+    margin: 16px 0 8px;
+}
+
+.erbjudande-list li {
+    font-size: 0.88rem;
+    color: var(--color-muted);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    position: relative;
+    padding-left: 16px;
+}
+
+.erbjudande-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.erbjudande-note {
+    font-size: 0.78rem;
+    color: rgba(245, 240, 232, 0.35);
+    font-style: italic;
+    margin-top: 12px;
+}
+
+.erbjudande-offers {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.erbjudande-offers li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.erbjudande-offers li:last-child {
+    border-bottom: none;
+}
+
+.offer-label {
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.offer-price {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .erbjudanden-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1081,7 +1243,7 @@ button {
 
     /* Om Oss */
     .om-img-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     /* Accordion */

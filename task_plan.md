@@ -58,6 +58,7 @@
 ---
 
 ## Phase 5: T — Trigger
-- [ ] Deploy to Netlify (when ready)
-- [ ] Domain/friend server setup guide written
+- [x] Push latest changes to GitHub (Evenemang redesign & images)
+- [ ] Connect GitHub Repo to Netlify for automatic deployment
+- [ ] Verify live site performance & responsiveness
 - [ ] `gemini.md` Maintenance Log finalized
