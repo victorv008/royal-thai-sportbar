@@ -729,8 +729,8 @@
                         const container = document.getElementById('menu-content');
                         if (!container) return;
 
-                        /* ── CONFIG — klistra in ditt Google Sheet-ID här ── */
-                        const GOOGLE_SHEET_ID = '13lU2BBixBs_xwoAzYBXeDStkLe_-LaLPLdsL7fLIT48';
+                        /* ── CONFIG — publicerad CSV-länk från Google Sheets ── */
+                        const GOOGLE_SHEET_ID = '2PACX-1vR56Ojyp6pLdrr-lfjfY5zvn0BHgwU29bqCYBmG6qUHqS6TiGAK1bCcednZLcUTcVjmQpseVGn1MlJM';
 
                         /* ── Kategori-namn → HTML-id mapping ────────────── */
                         const ID_MAP = {
@@ -812,7 +812,7 @@
                         /* ── Hämta menydata ──────────────────────────────── */
                         function fetchMenu() {
                                 if (GOOGLE_SHEET_ID) {
-                                        const url = 'https://docs.google.com/spreadsheets/d/' + GOOGLE_SHEET_ID + '/pub?gid=0&single=true&output=csv';
+                                        const url = 'https://docs.google.com/spreadsheets/d/e/' + GOOGLE_SHEET_ID + '/pub?output=csv';
                                         return fetch(url)
                                                 .then(function (r) { if (!r.ok) throw new Error(); return r.text(); })
                                                 .then(function (csv) { return csvToMenu(csv); })
