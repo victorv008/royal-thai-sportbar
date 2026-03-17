@@ -409,25 +409,6 @@ button {
     margin-bottom: 36px;
 }
 
-.foodora-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    font-size: 0.9rem;
-    color: var(--color-text);
-    transition: var(--transition);
-}
-
-.foodora-badge:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: var(--color-gold-dim);
-}
-
 .hero-scroll-hint {
     position: absolute;
     bottom: 32px;
@@ -595,27 +576,6 @@ button {
     margin-inline: auto;
 }
 
-.meny-foodora {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-top: 56px;
-    padding: 40px 24px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    max-width: 480px;
-    margin-inline: auto;
-}
-
-.meny-foodora p {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--color-text);
-}
-
 /* ═══════════════════════════════════════════════════════════════
    OM OSS
 ═══════════════════════════════════════════════════════════════ */
@@ -704,16 +664,6 @@ button {
     border-radius: 4px;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   HERO DELIVERY NOTE
-═══════════════════════════════════════════════════════════════ */
-.hero-delivery-note {
-    margin-top: 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-gold);
-    letter-spacing: 0.04em;
-}
 
 /* ═══════════════════════════════════════════════════════════════
    ERBJUDANDEN (Lunch & Afterwork)
