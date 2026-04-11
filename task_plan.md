@@ -25,6 +25,15 @@
 - [x] Behavioral Rules documented → Swedish language, SEK prices, simple UX
 - [ ] Research top restaurant & pub inspiration sites
 - [ ] Research Foodora integration method
+- [x] Sync with GitHub repo (git pull)
+- [x] Prepare local server (npx http-server)
+- [x] Implement split-image layout for Biljard & Shuffleboard
+- [x] Fix image loading (save images/biljard.jpg and images/blackjack.jpg)
+- [x] Optimize photo positioning (Blackjack zoom, Karaoke focus)
+- [x] Fix CSS responsive breakpoints for new layout
+- [x] Push all changes to GitHub (including Claude Code updates)
+- [x] Update Netlify live site
+- [x] Shut down local server
 - [ ] Review user's current website + screenshots
 - [ ] Define page structure & sitemap
 - [ ] Define JSON Data Schema in `gemini.md`
